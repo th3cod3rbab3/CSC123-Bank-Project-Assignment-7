@@ -48,7 +48,7 @@ public class MainBank {
 	
 	
 	//Main method. 
-	public static void main(String[] args){
+	public static void main(String[] args)throws NumberFormatException{
 		
 		new MainBank(System.in,System.out).run();
 		
@@ -155,7 +155,7 @@ public class MainBank {
 					//
 					try {
 						int accountNumber=ui.readInt(MSG_ACCOUNT_NUMBER);
-						money.conversion();
+						Currency.conversion();
 						ui.print("", new Object[] { accountNumber, Bank.getBalance(accountNumber) });
 					}
 					catch (NoSuchAccountException e) {
